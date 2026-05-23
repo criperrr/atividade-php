@@ -49,3 +49,51 @@ Route::get(
         'uses' => 'App\Http\Controllers\Admin\CursoController@excluir'
     ]
 );
+
+Route::get(
+    '/admin/alunos',
+    [
+        'as' => 'admin.alunos',
+        'uses' => 'App\Http\Controllers\Admin\AlunoController@index'
+    ]
+);
+
+Route::get(
+    '/admin/alunos/adicionar',
+    [
+        'as' => 'admin.alunos.adicionar',
+        'uses' => 'App\Http\Controllers\Admin\AlunoController@adicionar'
+    ]
+);
+
+Route::post(
+    '/admin/alunos/salvar',
+    [
+        'as' => 'admin.alunos.salvar',
+        'uses' => 'App\Http\Controllers\Admin\AlunoController@salvar'
+    ]
+);
+
+Route::get(
+    '/admin/alunos/editar/{id}',
+    [
+        'as' => 'admin.alunos.editar',
+        'uses' => 'App\Http\Controllers\Admin\AlunoController@editar'
+    ]
+);
+
+Route::put(
+    '/admin/alunos/atualizar/{id}',
+    [
+        'as' => 'admin.alunos.atualizar',
+        'uses' => 'App\Http\Controllers\Admin\AlunoController@atualizar'
+    ]
+);
+
+Route::get(
+    '/admin/alunos/excluir/{id}',
+    [
+        'as' => 'admin.alunos.excluir',
+        'uses' => 'App\Http\Controllers\Admin\AlunoController@excluir'
+    ]
+);
